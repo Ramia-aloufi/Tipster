@@ -38,13 +38,15 @@ class ViewController: UIViewController {
                 if sender.tag == 10{
                     inputNum = "0"
                     showLabel.text = inputNum
+                    inputNum = ""
+
                 }else{
                 inputNum.append(i.titleLabel!.text!)
                 showLabel.text = inputNum
                 }
             }
         }
-        guard let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100 else{return}
+         let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100
          let num1 = Float(showLabel.text!)! * Float(persentage[1].text!)! / 100
          let num2 = Float(showLabel.text!)! * Float(persentage[2].text!)! / 100
         
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
     @IBAction func TipSlider(_ sender: UISlider) {
         for i in persentage{
             let intsender = sender.value
-            guard let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100 else{return}
+            let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100
             let num1 = Float(showLabel.text!)! * Float(persentage[1].text!)! / 100
             let num2 = Float(showLabel.text!)! * Float(persentage[2].text!)! / 100
 
@@ -99,7 +101,7 @@ class ViewController: UIViewController {
         
         groupdividedNumber.text  = "\(Int(senderNum))"
         
-        guard let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100 else{return}
+        let num0:Float = Float(showLabel.text!)! * Float(persentage[0].text!)! / 100
         let num1 = Float(showLabel.text!)! * Float(persentage[1].text!)! / 100
         let num2 = Float(showLabel.text!)! * Float(persentage[2].text!)! / 100
         
